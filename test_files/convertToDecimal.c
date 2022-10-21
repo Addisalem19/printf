@@ -12,3 +12,11 @@ long long convertToDecimal(int Number, int base)
 	while(Number != 0)
 	{
 		decimalNumber += (Number%10) * power(base,i);
+		++i;
+		Number/=10;
+		}
+		
+		i = 1;
+		
+		return decimalNumber;
+		}
