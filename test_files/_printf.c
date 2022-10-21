@@ -22,3 +22,27 @@ int _printf(const char *format, ...){
 					  count += print_string(va_arg(data, char *));
 					  break;
 				  case '%':
+				  count += _putchar('%');
+				  break;
+				  case 'd':
+				  count += print_decimal(va_arg(data, int));
+				  break;
+				  case 'i':
+				  count += print_decimal(va_arg(data, int));
+				  break;
+				  case 'b':
+				  count += print_binary(va_arg(data, int));
+				  break;
+				  case 'u':
+				  count += print_unsigned(va_arg(data, unsigned int));
+				  break;
+				  default:
+				  break;
+				  }
+				  
+				  i += 2;
+				  }
+				  }
+				  
+				  return (count);
+				  }
