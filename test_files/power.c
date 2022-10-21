@@ -4,3 +4,7 @@ long long int power(int base, int x){
 
 	for (x; x>0; x--)
 	{
+	result = result * base;
+	}
+	return (result);
+	}
