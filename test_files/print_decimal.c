@@ -6,3 +6,10 @@ int print_decimal(int value){
 		count += _putchar('-');
 		value = value * -1;
 	}
+	if (value/10)
+	count += print_decimal(value/10);
+	
+	count += _putchar(value%10 + '0');
+	
+	return (count);
+	}
